@@ -65,6 +65,7 @@ const ContactForm = ({ onResult }) => {
         value={formData.name}
         onChange={handleChange}
         style={inputStyle}
+        spellCheck={false}
       />
       <input
         type="email"
@@ -73,6 +74,7 @@ const ContactForm = ({ onResult }) => {
         value={formData.email}
         onChange={handleChange}
         style={inputStyle}
+        spellCheck={false}
       />
       <textarea
         name="message"
@@ -80,6 +82,7 @@ const ContactForm = ({ onResult }) => {
         value={formData.message}
         onChange={handleChange}
         style={{ ...inputStyle, height: "100px" }}
+        spellCheck={false}
       />
       <div style={{ display: "flex", gap: "10px" }}>
     <button

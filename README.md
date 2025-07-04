@@ -1,12 +1,54 @@
-# React + Vite
+# HTTP vs HTTPS Simulation – React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React contact form project that visually demonstrates the difference between sending data over HTTP (insecure) and HTTPS (secure).  
+It simulates encryption using AES to help understand how HTTPS protects sensitive data.
 
-Currently, two official plugins are available:
+While real HTTPS uses browser-level TLS encryption (which cannot be implemented directly in this app), this project simulates the concept using basic AES encryption on the frontend for learning purposes.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Project Goal
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+I built this project to:
+
+- Understand the difference between HTTP and HTTPS
+- Learn how encryption works (simulated using AES)
+- Explore browser behavior for secure and insecure requests
+- Practice React form handling and API interaction
+
+## Tech Stack
+
+- React (Functional Components & Hooks)
+- `crypto-js` (for AES simulation)
+- JSONPlaceholder API (for mock POST requests)
+- CSS-in-JS (inline styling for layout and design)
+
+## Features
+
+- Contact form with fields: name, email, and message
+- Two submission types:
+  - Submit via HTTP: Sends raw plain JSON (simulating insecure transfer)
+  - Submit via HTTPS: Encrypts the data before sending (simulated)
+- Popup message clearly explains what happened
+- Displays raw and encrypted data to demonstrate the security difference
+
+## Screenshots
+
+### 1. Contact Form UI
+
+![Contact Form](public/images/Screenshot%202025-07-04%20125449.png)
+
+### 2. HTTP Plain Text Submission
+
+![HTTP Plain Data](public/images/Screenshot%202025-07-04%20125654.png)
+
+### 3. HTTPS Encrypted Submission (AES Simulation)
+
+![HTTPS Encrypted Data](public/images/Screenshot%202025-07-04%20141530.png)
+
+
+## How to Run Locally
+
+git clone https://github.com/your-username/http-vs-https-demo.git
+cd http-vs-https-demo
+npm install
+npm start
